@@ -52,18 +52,39 @@ Model Waveform
 <img width="706" height="167" alt="image" src="https://github.com/user-attachments/assets/bff0d8fd-d679-444e-af37-0b34585853c1" />
 
 Program
-
+```
+Am = 3.9;
+Ac = 7.8;
+fm = 361;
+fc = 3610;
+fs = 36100;
+t = 0:1/fs:2/fm;
+em1 = Am*cos(2*3.14*fm*t);
+subplot(4,1,1);
+plot(t,em1);
+ec1 = Ac*cos(2*3.14*fc*t);
+subplot(4,1,2);
+plot(t,ec1);
+em2 = Am*sin(2*3.14*fm*t);
+ec2 = Ac*sin(2*3.14*fc*t);
+eAm1 = Ac*(1+(em1/Ac)).*cos(2*3.14*fc*t);
+eAm2 = Ac*(1-(em1/Ac)).*cos(2*3.14*fc*t);
+eDSBSC1 = eAm1-eAm2;
+eAm3 = Ac*(1+(em2/Ac)).*sin(2*3.14*fc*t);
+eAm4 = Ac*(1-(em2/Ac)).*sin(2*3.14*fc*t);
+eDSBSC2 = eAm3-eAm4;
+eLSB = eDSBSC1+eDSBSC2;
+subplot(4,1,3);
+plot(t,eLSB);
+eUSB = eDSBSC1-eDSBSC2;
+subplot(4,1,4);
+plot(t,eUSB);
+```
 OUTPUT WAVEFORM
+<img width="1782" height="1101" alt="image" src="https://github.com/user-attachments/assets/7df6ebf3-eb84-4f2d-8739-016cbbe578f8" />
 
 TABULATION
-
-
-
-
-
-
-
-
+![WhatsApp Image 2026-02-26 at 11 20 57](https://github.com/user-attachments/assets/3a391cbc-f9d5-4ebd-84ff-30b59f16700a)
 
 RESULT:
 
