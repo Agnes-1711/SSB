@@ -1,19 +1,15 @@
 # SSB
-
 EXP NO: 3	SSB-SC-AM MODULATION using SCILAB
 
 AIM:
-
 To write a program to perform SSBSC modulation and demodulation using SCI LAB and study its spectral characteristics
 
 EQUIPMENTS REQUIRED
-
 •	Computer with i3 Processor
 
 •	SCI LAB
 
 Note: Keep all the switch faults in off position
-
 
 Algorithm
 1.	Define Parameters:
@@ -33,7 +29,6 @@ Algorithm
 •	Low-pass Filtering: Apply a low-pass filter to remove high-frequency components and recover the original message signal.
 5.	Visualization:
 •	Plot the message signal, carrier signal, SSBSC modulated signal, and the recovered signal after demodulation.
-
 
 PROCEDURE
 
